@@ -13,4 +13,9 @@ export const resolvers = {
       return db.categories.find((category) => category.id === args.categoryId);
     },
   },
+  Product: {
+    category: (p: any, args: { categoryId: string }, context: any) => {
+      return db.categories.find((category) => category.id === p.categoryId);
+    },
+  },
 };
